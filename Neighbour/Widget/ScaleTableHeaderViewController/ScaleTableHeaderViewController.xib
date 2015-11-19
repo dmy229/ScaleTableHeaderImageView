@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScaleTableHeaderViewController" customModule="Neighbour" customModuleProvider="target">
+            <connections>
+                <outlet property="scrollImage" destination="MQk-wF-pCB" id="M4I-BL-T4W"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="ul4-vU-Qln"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="450" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="t_user_listview_header" translatesAutoresizingMaskIntoConstraints="NO" id="MQk-wF-pCB" customClass="ScaleTableHeaderImageView" customModule="Neighbour" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="450" height="200"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="青岛" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="73" translatesAutoresizingMaskIntoConstraints="NO" id="wA9-Ze-4ed">
+                    <rect key="frame" x="189" y="30" width="73" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="8Fc-Tq-uos"/>
+                        <constraint firstAttribute="width" constant="73" id="an5-bE-m4I"/>
+                        <constraint firstAttribute="width" secondItem="wA9-Ze-4ed" secondAttribute="height" multiplier="73:40" id="iCd-vM-VLW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="MQk-wF-pCB" secondAttribute="bottom" id="1qi-e8-WPE"/>
+                <constraint firstItem="MQk-wF-pCB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Bz5-EB-kWR"/>
+                <constraint firstItem="wA9-Ze-4ed" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="CAi-3v-Yf2"/>
+                <constraint firstAttribute="trailing" secondItem="MQk-wF-pCB" secondAttribute="trailing" id="Xqf-UW-42i"/>
+                <constraint firstItem="wA9-Ze-4ed" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="bZz-d0-SDJ"/>
+                <constraint firstItem="MQk-wF-pCB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xd4-Sv-gtU"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="263" y="154"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="t_user_listview_header" width="1286" height="854"/>
+    </resources>
+</document>
