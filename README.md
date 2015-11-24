@@ -27,12 +27,35 @@ class MainViewController: UIViewController,UITableViewDataSource,UITableViewDele
 var scaleTableHeaderViewController:ScaleTableHeaderViewController!;
 
 override func viewDidLoad() {
-super.viewDidLoad();
-scaleTableHeaderViewController = ScaleTableHeaderViewController(nibName:"ScaleTableHeaderViewController",bundle:nil);
-scaleTableHeaderViewController.tableView = self.tableView;
-self.tableView.tableHeaderView = scaleTableHeaderViewController.view;
-}
-}
+        super.viewDidLoad()
+        
+        self.title = "我的"
+        
+        self.navigationController?.navigationBar.barTintColor = UIColor.orangeColor();
+        
+        self.scaleTableHeaderView = ScaleTableHeaderViewController(nibName:"ScaleTableHeaderViewController", bundle: nil);
+        self.scaleTableHeaderView.tableView = tableView;
+        
+    }
+
+
+func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) ->UITableViewCell {
+        
+        let nib:UINib = UINib(nibName: "MyTableViewCell", bundle: NSBundle.mainBundle());
+        tableView.registerNib(nib, forCellReuseIdentifier: "MyTableViewCell");
+        let cell = tableView.dequeueReusableCellWithIdentifier("MyTableViewCell", forIndexPath: indexPath) as! MyTableViewCell;
+        var menuName = self.menuTable.objectAtIndex(indexPath.section).objectAtIndex(indexPath.row).objectAtIndex(1) as! Data;
+        cell.menuName.text = menuName.value;
+        //print(cell.frame);
+        return cell;
+    }
+    
+func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if(section == 0){
+            return 200;
+        }
+        return 1;
+    }
 
 ```
 
